@@ -8,9 +8,8 @@ model_columns = joblib.load('model_columns.pkl')
 
 st.set_page_config(page_title="Heart Risk Predictor", page_icon="❤️")
 st.title("Heart Disease Risk Predictor")
+st.markdown("**Developed by Louie Anton Alupay**")
 
-# Sidebar credit
-st.sidebar.markdown("Created by **Louie Anton Alupay**")
 
 # Input fields
 def user_input():
