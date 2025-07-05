@@ -6,7 +6,11 @@ import pandas as pd
 model = joblib.load('heart_disease_model.pkl')
 model_columns = joblib.load('model_columns.pkl')
 
+st.set_page_config(page_title="Heart Risk Predictor", page_icon="❤️")
 st.title("Heart Disease Risk Predictor")
+
+# Sidebar credit
+st.sidebar.markdown("Created by **Louie Anton Alupay**")
 
 # Input fields
 def user_input():
@@ -67,3 +71,12 @@ if st.button("Predict"):
     st.subheader("Result:")
     st.write("**At Risk**" if prediction == 1 else "**Not At Risk**")
     st.write(f"Confidence Score: {confidence:.2f}")
+
+# Optional: Footer
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center;'>"
+    "<small>Developed by <strong>Louie Anton Alupay</strong></small>"
+    "</div>",
+    unsafe_allow_html=True
+)
